@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="e7b377e849ef45e0a3320c72efdf2588" Name="Diagram1">
+        <EntityTypeShape EntityType="WorldYachtsModel.AccessoriesToBoat" Width="1.5" PointX="3" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="WorldYachtsModel.Accessory" Width="1.5" PointX="0.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="WorldYachtsModel.Boat" Width="1.5" PointX="0.75" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="WorldYachtsModel.Contract" Width="1.5" PointX="8.25" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="WorldYachtsModel.Customer" Width="1.5" PointX="3.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="WorldYachtsModel.Invoice" Width="1.5" PointX="10.5" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="WorldYachtsModel.Order" Width="1.5" PointX="6" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="WorldYachtsModel.OrderDetail" Width="1.5" PointX="11.25" PointY="2.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="WorldYachtsModel.Partner" Width="1.5" PointX="1.5" PointY="9.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="WorldYachtsModel.SalesPerson" Width="1.5" PointX="3.75" PointY="8.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="WorldYachtsModel.User" Width="1.5" PointX="5.75" PointY="2.125" IsExpanded="true" />
+        <AssociationConnector Association="WorldYachtsModel.FK_AccessoriesToBoat_Accessory" ManuallyRouted="false" />
+        <AssociationConnector Association="WorldYachtsModel.FK_AccessoriesToBoat_Boat" ManuallyRouted="false" />
+        <AssociationConnector Association="WorldYachtsModel.FK_Accessory_Partner" ManuallyRouted="false" />
+        <AssociationConnector Association="WorldYachtsModel.FK_OrderDetail_Accessory" ManuallyRouted="false" />
+        <AssociationConnector Association="WorldYachtsModel.FK_Order_Boat" ManuallyRouted="false" />
+        <AssociationConnector Association="WorldYachtsModel.FK_Contract_Order" ManuallyRouted="false" />
+        <AssociationConnector Association="WorldYachtsModel.FK_Invoice_Contract" ManuallyRouted="false" />
+        <AssociationConnector Association="WorldYachtsModel.FK_Order_Customer" ManuallyRouted="false" />
+        <AssociationConnector Association="WorldYachtsModel.FK_Order_SalesPerson" ManuallyRouted="false" />
+        <AssociationConnector Association="WorldYachtsModel.FK_OrderDetail_Order" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

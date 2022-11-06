@@ -1,0 +1,21 @@
+﻿<Window x:Class="Yachts.DeleteUsers"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Yachts"
+        mc:Ignorable="d"
+        Title="DeleteUsers" Height="150" Width="450">
+    <Grid Background="#FF009FDA">
+        <DockPanel LastChildFill="False" VerticalAlignment="Center">
+            <StackPanel DockPanel.Dock="Top" Orientation="Horizontal">
+                <Label Content="Вы уверены, что хотите удалить: " Style="{StaticResource ResourceKey=lognpass}"></Label>
+                <Label x:Name="lbluser" Content="user" Style="{StaticResource ResourceKey=lognpass}"></Label>
+            </StackPanel>
+            <StackPanel DockPanel.Dock="Top" Orientation="Horizontal">
+                <Button x:Name="btnYes" Style="{StaticResource ResourceKey=auth}" Content="Да" Click="btnYes_Click"></Button>
+                <Button x:Name="btnNo" Style="{StaticResource ResourceKey=auth}" Content="Нет" Click="btnNo_Click"></Button>
+            </StackPanel>
+        </DockPanel>
+    </Grid>
+</Window>

@@ -1,0 +1,42 @@
+﻿<Window x:Class="Yachts.Main"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Yachts"
+        mc:Ignorable="d"
+        Title="Main" Height="450" Width="800">
+    <Grid>
+        <DockPanel LastChildFill="False" Background="#FF009FDA">
+            <StackPanel DockPanel.Dock="Top" Orientation="Horizontal" HorizontalAlignment="Center">
+                <Label Content="Введите текст для поиска:" Style="{StaticResource ResourceKey=lognpass}"></Label>
+                <TextBox x:Name="txtSearch" Style="{StaticResource ResourceKey=inputLogPass}" TextChanged="txtSearch_TextChanged"></TextBox>
+                <Label Content="Сортировка:" Style="{StaticResource ResourceKey=lognpass}"></Label>
+                <ComboBox x:Name="cmbSort" SelectionChanged="cmbSort_SelectionChanged" Height="40" Width="200">
+                    <ComboBoxItem Content="А -> Я"></ComboBoxItem>
+                    <ComboBoxItem Content="Я -> А"></ComboBoxItem>
+                </ComboBox>
+            </StackPanel>
+            <DataGrid DockPanel.Dock="Top" x:Name="dataGridUsers" AutoGenerateColumns="False" ColumnWidth="*" Background="#FF009FDA" HorizontalContentAlignment="Center">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Логин" Binding="{Binding Login}"></DataGridTextColumn>
+                    <DataGridTextColumn Header="Пароль" Binding="{Binding Password}"></DataGridTextColumn>
+                    <DataGridTemplateColumn>
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button x:Name="editUsers" Click="editUsers_Click" Content="✎" Style="{StaticResource ResourceKey=auth}"></Button>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                    <DataGridTemplateColumn>
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button x:Name="deleteUsers" Click="deleteUsers_Click" Content="×" Style="{StaticResource ResourceKey=auth}"></Button>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+        </DockPanel>
+    </Grid>
+</Window>
